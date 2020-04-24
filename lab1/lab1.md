@@ -17,6 +17,9 @@ In this lab you will create a data stream using AWS Management concolse and will
 8. Wait for the stream to be in **Active** status
 9. From the Services menu select IAM and open it in a new window
 ![Image of EC2](/images/Lab1-Image3.PNG)
-10. Go to Roles --> Create role
+10. Go to Roles --> Create role  
 ![Image of EC2](/images/Lab1-Image4.PNG)
-
+11. Select type of trusted entity - **AWS Services**  
+Select **EC2**  
+Select **Next:Permissions**  
+![Image of EC2](/images/Lab1-Image5.PNG)
