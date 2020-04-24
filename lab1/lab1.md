@@ -11,8 +11,8 @@ In this lab you will create a data stream using AWS Management concolse and will
 ![Image of KDS](/images/KinesisDSHome.PNG)
 6. Select **Create data stream** 
 7. Create a data stream as follow. 
-Data stream name: **dswlab1**
-Number of open shards: 1
+	Data stream name: **dswlab1**
+	Number of open shards: 1
 ![Image of KDS](/images/Lab1-Image2.PNG)
 8. Wait for the stream to be in **Active** status
 9. From the Services menu select IAM and open it in a new window
