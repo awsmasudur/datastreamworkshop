@@ -14,4 +14,9 @@ In this lab you will create a data stream using AWS Management concolse and will
 Data stream name: **dswlab1**
 Number of open shards: 1
 ![Image of KDS](/images/Lab1-Image2.PNG)
+8. Wait for the stream to be in **Active** status
+9. From the Services menu select IAM and open it in a new window
+![Image of EC2](/images/Lab1-Image3.PNG)
+10. Go to Roles --> Create role
+![Image of EC2](/images/Lab1-Image4.PNG)
 
