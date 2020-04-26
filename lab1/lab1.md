@@ -28,8 +28,8 @@ Select **Next:Permissions**
 14. Enter role name: **dswlabrole** and create the role
 15. Create a EC2 instance with **Amazon Linux 2**, select the IAM role you create already (**dswlabrole**), ensure you have internet access on that machine. If you are new to AWS, follow this steps to create a new instance: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
 
-From the AWS Service menue choose **EC2**
-16. Select **Launch instance**
+From the AWS Service menue choose **EC2**  
+16. Select **Launch instance**  
 17. Select **Amazon Linux 2** 
 18. Select **t2.micro** and click on **Next:Configure instance Details**
 19. Select the IAM role you created: **dswlabrole**, select **Next:Add Storage**
