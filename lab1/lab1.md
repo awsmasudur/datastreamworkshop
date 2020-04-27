@@ -33,11 +33,35 @@ Select **Next:Permissions**
 3. After connecting using SSH enter: ```aws configure```  
 	Press **enter** for all settings except region. Enter **us-east-1** as default region  
 4. Run the below command to ensure AWS CLI has been configurred correctly.  
-```aws kinesis list-streams**```  
+```aws kinesis list-streams```  
 **Sample output:  
 {
     "StreamNames": [
         "dswlab1"
     ]
-}**
+}**  
 
+## Performing straming operations with CLI  
+1. Run below command to see the configuraiton of your previously created stream  
+```aws kinesis describe-stream --stream-name dswlab1```   
+2. Run below command to insert data to stream  
+```aws kinesis put-record --stream-name dswlab1 --partition-key P001 --data testdata```
+3. Copy the **SequenceNumber** from the output of the previous command
+4. Lets read data from the stream. To do this run the below command first  
+```SHARD_ITERATOR=$(aws kinesis get-shard-iterator --shard-id shardId-000000000000 --shard-iterator-type AT_SEQUENCE_NUMBER --stream-name dswlab1 --starting-sequence-number REPLACE_WITH_SEQUENCENUMBER_YOU_COPIED --query 'ShardIterator')```  
+4. Now run this command  
+```aws kinesis get-records --shard-iterator $SHARD_ITERATOR```  
+5. This will return a result as below:  
+{
+    "Records": [
+        {
+            "Data": "dGVzdGRhdGE=",
+            "PartitionKey": "P001",
+            "ApproximateArrivalTimestamp": 1587951917.165,
+            "SequenceNumber": "49606373519072809783930760965737010169802318611644153858"
+        }
+    ],
+    "NextShardIterator": "AAAAAAAAAAFhGBdelerzLp3cCzreWKlkGgl6Yor+gUoGMgWDaL37en+W9qqhIy3Iv6U1xOIYv8f8qn/jwwQ1lUGhurwh0UJC3Mlgl5nHpZfFfbs33xpnr7kTyr1fCCIIpTr6ju9oyxiMLHEbfPAqxXvHQR3xIMorXwPWpsHfx2CpuhO9hzQztqnaITvoWQyzXTsPILn5LmUZ9VvaP/clC9s2Ox3aDBZU",
+    "MillisBehindLatest": 0
+}  
+6. The **Data** in the output is Base64 encoded. If you are using KCL it will decode automatically. But for this lab we will decode it manually. To do this go to https://www.base64decode.org/ and paste the value of **Data**  you got on your get-records api call. You will see the exact data that you enterred using put-record api.
