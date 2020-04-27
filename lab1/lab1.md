@@ -26,16 +26,8 @@ Select **Next:Permissions**
 12. Select **AdministratorAccess** policy and click Next
 13. Click next on Add tags page
 14. Enter role name: **dswlabrole** and create the role
-15. Create a EC2 instance with **Amazon Linux 2**, select the IAM role you create already (**dswlabrole**), ensure you have internet access on that machine. If you are new to AWS, follow this steps to create a new instance: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
 
-From the AWS Service menue choose **EC2**  
-16. Select **Launch instance**  
-17. Select **Amazon Linux 2** 
-18. Select **t2.micro** and click on **Next:Configure instance Details**
-19. Select the IAM role you created: **dswlabrole**, select **Next:Add Storage**
-20. Change the size to 50GB and select **Review and Launch**
-21. Select **Next:Configure Security Group**
-22. Create a new security group. Group name:**dswlabSG**
-23. Select **Review and Launch** --> select **Launch**
-24
+## Configure EC2  
+15. Create a EC2 instance with **Amazon Linux 2**, select the IAM role you have created already (**dswlabrole**), ensure you have internet access on that machine. If you are new to AWS, follow this steps to create a new instance: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html  
+16. Use a SSH client to connect with the EC2 instance: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html or you can also use EC2 Instance Connect mentioned here: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html
 
