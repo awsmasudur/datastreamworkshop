@@ -2,6 +2,7 @@
 
 In this lab you will create a data stream using AWS Management concolse and will use AWS CLI to perform some stream operations.
 
+## Creating stream using AWS management console  
 1. Go to AWS Management console:
   https://console.aws.amazon.com/
 2. If you don't have AWS account please follow the steps mentioned here: https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/
@@ -14,7 +15,9 @@ In this lab you will create a data stream using AWS Management concolse and will
 	Data stream name: **dswlab1**  
 	Number of open shards: 1
 ![Image of KDS](/images/Lab1-Image2.PNG)
-8. Wait for the stream to be in **Active** status
+8. Wait for the stream to be in **Active** status  
+
+## Configure IAM role  
 9. From the Services menu select IAM and open it in a new window
 ![Image of EC2](/images/Lab1-Image3.PNG)
 10. Go to Roles --> Create role  
@@ -67,5 +70,5 @@ Select **Next:Permissions**
 6. The **Data** in the output is Base64 encoded. If you are using KCL it will decode automatically. But for this lab we will decode it manually. To do this go to https://www.base64decode.org/ and paste the value of **Data**  you got on your get-records api call. You will see the exact data that you enterred using put-record api.  
 
 To learn more about PutRecord and GetRecords API read the below documentations:  
-[1] https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html
+[1] https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html  
 [2] https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetRecords.html
