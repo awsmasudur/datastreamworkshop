@@ -30,14 +30,14 @@ Select **Next:Permissions**
 ## Configure EC2  
 1. Create a EC2 instance with **Amazon Linux 2**, select the IAM role you have created already (**dswlabrole**), ensure you have internet access on that machine. If you are new to AWS, follow this steps to create a new instance: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html  
 2. Use a SSH client to connect with the EC2 instance: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html or you can also use EC2 Instance Connect mentioned here: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html
-3. After connecting using SSH enter: **aws configure**  
+3. After connecting using SSH enter: ```aws configure```  
 	Press **enter** for all settings except region. Enter **us-east-1** as default region  
 4. Run the below command to ensure AWS CLI has been configurred correctly.  
-**aws kinesis list-streams**  
-Sample output:  
+```aws kinesis list-streams**```  
+**Sample output:  
 {
     "StreamNames": [
         "dswlab1"
     ]
-}
+}**
 
