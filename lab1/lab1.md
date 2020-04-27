@@ -64,4 +64,8 @@ Select **Next:Permissions**
     "NextShardIterator": "AAAAAAAAAAFhGBdelerzLp3cCzreWKlkGgl6Yor+gUoGMgWDaL37en+W9qqhIy3Iv6U1xOIYv8f8qn/jwwQ1lUGhurwh0UJC3Mlgl5nHpZfFfbs33xpnr7kTyr1fCCIIpTr6ju9oyxiMLHEbfPAqxXvHQR3xIMorXwPWpsHfx2CpuhO9hzQztqnaITvoWQyzXTsPILn5LmUZ9VvaP/clC9s2Ox3aDBZU",
     "MillisBehindLatest": 0
 }  
-6. The **Data** in the output is Base64 encoded. If you are using KCL it will decode automatically. But for this lab we will decode it manually. To do this go to https://www.base64decode.org/ and paste the value of **Data**  you got on your get-records api call. You will see the exact data that you enterred using put-record api.
+6. The **Data** in the output is Base64 encoded. If you are using KCL it will decode automatically. But for this lab we will decode it manually. To do this go to https://www.base64decode.org/ and paste the value of **Data**  you got on your get-records api call. You will see the exact data that you enterred using put-record api.  
+
+To learn more about PutRecord and GetRecords API read the below documentations:  
+[1] https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html
+[2] https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetRecords.html
